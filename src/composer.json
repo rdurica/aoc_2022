@@ -1,0 +1,28 @@
+{
+    "name": "rdurica/aoc_2022",
+    "description": "Advent of Code is a yearly event where a set of programming puzzles are released for the public to solve. I have decided to complete the 2022 year's challenges using PHP language, to train and improve my skills in this language.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Durica"
+        }
+    ],
+    "autoload": {
+        "classmap": ["App"],
+        "psr-4": {
+            "App\\": "App"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "phpcs": "./vendor/bin/phpcs --standard=PSR12 App/",
+        "phpcbf": "./vendor/bin/phpcbf --standard=PSR12 App/",
+        "post-install-cmd": [
+            "./vendor/bin/phpcs --config-set colors 1",
+            "./vendor/bin/phpcs --config-set report_width 140"
+        ]
+    }
+}
